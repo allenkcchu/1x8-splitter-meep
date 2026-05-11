@@ -1,0 +1,15 @@
+[NbConvertApp] Converting notebook meep_1x8_eval.ipynb to notebook
+/home/allen/anaconda3/envs/pmp/lib/python3.10/site-packages/nbformat/__init__.py:92: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+[NbConvertApp] Writing 778686 bytes to meep_1x8_eval.ipynb
+DONE Sun May 10 22:23:24 PDT 2026
+[NbConvertApp] Converting notebook meep_1x8_eval.ipynb to notebook
+/home/allen/anaconda3/envs/pmp/lib/python3.10/site-packages/nbformat/__init__.py:92: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+[NbConvertApp] Writing 775362 bytes to meep_1x8_eval.ipynb
+DONE Sun May 10 22:30:12 PDT 2026
+[NbConvertApp] Converting notebook meep_1x8_eval.ipynb to notebook
+/home/allen/anaconda3/envs/pmp/lib/python3.10/site-packages/nbformat/__init__.py:92: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+  validate(nb)
+[NbConvertApp] Writing 787092 bytes to meep_1x8_eval.ipynb
+DONE Sun May 10 22:39:29 PDT 2026

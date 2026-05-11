@@ -1,0 +1,48 @@
+{
+  "mmi_L": 50.0,
+  "mmi_W": 14.0,
+  "N_out": 8,
+  "Nx_des": 400,
+  "Ny_des": 112,
+  "resolution": 15,
+  "des_res": 8,
+  "filter_sig_px": 2.4,
+  "wg_ext": 4.0,
+  "pml_th": 2.0,
+  "n_eff_2d": 1.883557393291659,
+  "freq0": 0.6451612903225806,
+  "geo_init": {
+    "port_pitch": 1.75,
+    "wg_w_in": 1.0,
+    "wg_w_out": 1.0
+  },
+  "geo_bounds": {
+    "port_pitch": [
+      1.2,
+      1.801
+    ],
+    "wg_w_in": [
+      0.8,
+      1.5
+    ],
+    "wg_w_out": [
+      0.8,
+      1.5
+    ]
+  },
+  "n_iters": 100,
+  "lr_topo": 0.02,
+  "GEO_LR": 0.005,
+  "GEO_INTERVAL": 8,
+  "alpha_schedule": [
+    0.0,
+    0.05,
+    0.12
+  ],
+  "beta_schedule": [
+    4,
+    8,
+    16,
+    32
+  ]
+}
