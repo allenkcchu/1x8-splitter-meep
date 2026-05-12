@@ -1,0 +1,41 @@
+Using MPI version 4.0, 1 processes
+Geo: {'port_pitch': 1.7976416751650703, 'wg_w_in': 1.008844880139456, 'wg_w_out': 0.9970864385589009}
+port_ys: [-6.292 -4.494 -2.696 -0.899  0.899  2.696  4.494  6.292]
+n_eff=1.8836
+Gray fraction (5-95%): 10.4%
+
+Running FDTD...
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Done.
+
+====================================================
+Stage 1 v2 Transmission Results
+====================================================
+P_in = 978.1210
+Ideal/port = 12.50%
+
+  Port 1 (y=-6.292µm):  13.05%  ████████████████████
+  Port 2 (y=-4.494µm):   3.13%  █████
+  Port 3 (y=-2.696µm):  11.47%  ██████████████████
+  Port 4 (y=-0.899µm):   9.93%  ███████████████
+  Port 5 (y=+0.899µm):   7.83%  ████████████
+  Port 6 (y=+2.696µm):  11.30%  ██████████████████
+  Port 7 (y=+4.494µm):   3.12%  ████
+  Port 8 (y=+6.292µm):  25.74%  █████████████████████████████████████████
+
+  Sum of port T         : 85.57%
+  Full cross-section T  : 86.00%
+  Mean/port             : 10.70%
+  Std dev               : 6.67%
+  Max imbalance         : 22.62%
+====================================================
+
+Comparison v1 vs v2:
+  v1 mean=10.72%  std=8.52%  imbalance=23.27%  total=86.67%
+  v2 mean=10.70%  std=6.67%  imbalance=22.62%  total=86.00%
+
+Figure: /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage1_v2/transmission_eval_v2.png
+JSON:   /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage1_v2/transmission_eval_v2.json
+
+Elapsed run time = 43.8617 s
+DONE Mon May 11 10:19:18 PDT 2026

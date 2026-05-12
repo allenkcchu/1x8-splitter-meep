@@ -1,0 +1,1065 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Using MPI version 4.0, 1 processes
+=== Stage 2: variant=L20W18  out=/mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage2_L20W18 ===
+mmi=20.0x18.0 µm  n_eff=1.8836
+geo: {'port_pitch': 1.780726924147931, 'wg_w_in': 1.0002613661359754, 'wg_w_out': 1.0189532978044873}
+port_ys: [-6.233 -4.452 -2.671 -0.89   0.89   2.671  4.452  6.233]
+Conic filter: R=300nm  kernel (7, 7)
+Warm start loaded: /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage1_L20W18/x_final.npy  shape=(23040,)
+
+Starting Stage 2: 50 iters | conic R=300nm | alpha=0.12 | lr=0.01
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   0 | beta=32 | alpha=0.12 | J=156.2959
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   1 | beta=32 | alpha=0.12 | J=375.5730
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   2 | beta=32 | alpha=0.12 | J=620.7883
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   3 | beta=32 | alpha=0.12 | J=836.0176
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   4 | beta=32 | alpha=0.12 | J=1010.4386
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   5 | beta=32 | alpha=0.12 | J=1153.8499
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   6 | beta=32 | alpha=0.12 | J=1265.2373
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   7 | beta=32 | alpha=0.12 | J=1350.7730
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   8 | beta=32 | alpha=0.12 | J=1423.9787
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter   9 | beta=32 | alpha=0.12 | J=1488.5762
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  10 | beta=32 | alpha=0.12 | J=1542.7596
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  11 | beta=32 | alpha=0.12 | J=1583.6833
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  12 | beta=32 | alpha=0.12 | J=1614.4976
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  13 | beta=32 | alpha=0.12 | J=1639.6344
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  14 | beta=32 | alpha=0.12 | J=1660.4854
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  15 | beta=32 | alpha=0.12 | J=1677.7245
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  16 | beta=32 | alpha=0.12 | J=1692.9180
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  17 | beta=32 | alpha=0.12 | J=1705.8513
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  18 | beta=32 | alpha=0.12 | J=1715.8888
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  19 | beta=32 | alpha=0.12 | J=1722.5672
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  20 | beta=48 | alpha=0.12 | J=1723.3100
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  21 | beta=48 | alpha=0.12 | J=1731.9766
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  22 | beta=48 | alpha=0.12 | J=1739.4475
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  23 | beta=48 | alpha=0.12 | J=1744.8736
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  24 | beta=48 | alpha=0.12 | J=1747.8853
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  25 | beta=48 | alpha=0.12 | J=1751.9451
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  26 | beta=48 | alpha=0.12 | J=1754.1753
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  27 | beta=48 | alpha=0.12 | J=1756.6642
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  28 | beta=48 | alpha=0.12 | J=1758.8421
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  29 | beta=48 | alpha=0.12 | J=1760.8649
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  30 | beta=48 | alpha=0.12 | J=1762.5412
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  31 | beta=48 | alpha=0.12 | J=1764.3136
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  32 | beta=48 | alpha=0.12 | J=1766.3213
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  33 | beta=48 | alpha=0.12 | J=1767.4828
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  34 | beta=48 | alpha=0.12 | J=1768.6543
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  35 | beta=64 | alpha=0.12 | J=1766.6309
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  36 | beta=64 | alpha=0.12 | J=1769.7248
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  37 | beta=64 | alpha=0.12 | J=1770.9633
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  38 | beta=64 | alpha=0.12 | J=1771.3007
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  39 | beta=64 | alpha=0.12 | J=1772.2407
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  40 | beta=64 | alpha=0.12 | J=1773.6565
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  41 | beta=64 | alpha=0.12 | J=1774.3029
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  42 | beta=64 | alpha=0.12 | J=1775.1765
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  43 | beta=64 | alpha=0.12 | J=1775.8249
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  44 | beta=64 | alpha=0.12 | J=1776.2197
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  45 | beta=64 | alpha=0.12 | J=1776.5340
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  46 | beta=64 | alpha=0.12 | J=1777.1646
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  47 | beta=64 | alpha=0.12 | J=1777.6844
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  48 | beta=64 | alpha=0.12 | J=1777.9102
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Starting forward run...
+Starting adjoint run...
+Calculating gradient...
+  [S2/L20W18] Iter  49 | beta=64 | alpha=0.12 | J=1778.1950
+
+Done. J: 156.2959 → 1778.1950
+Results: /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage2_L20W18
+
+Elapsed run time = 5886.0381 s
+DONE Tue May 12 10:49:12 PDT 2026

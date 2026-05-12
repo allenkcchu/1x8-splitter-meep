@@ -169,37 +169,47 @@
 - std 從 8.5% 改善到 6.7%（~22% 改善），但仍離理想（std→0）很遠
 - 根本瓶頸：30µm × 14µm 的 MMI 很難同時達到高效率 + 8-way 均等分配；可能需要更長的 MMI 或不同的 objective
 
-### Parametric Study（L × W 掃描，2026-05-11 開始）
-> 🔄 進行中
+### Parametric Study（L × W 掃描，2026-05-11～12）
+> ✅ 完成（7 個變體）
 
-**動機：** L=30µm 設計 std=6.7%，Port 2/7 僅 3%，根本瓶頸是 MMI 太短導致模態分布不均。
-
-**設計矩陣：**
-
-| 變體 | mmi_L | mmi_W | 設計 vars | FDTD cell | 資料夾 | 狀態 |
-|------|-------|-------|----------|-----------|--------|------|
-| L30W14（基準） | 30 µm | 14 µm | 240×112 | 38×18 µm² | `stage1_v2/` | ✅ 完成 |
-| L40W14 | 40 µm | 14 µm | 320×112 | 48×18 µm² | `stage1_L40W14/` | 🔄 進行中 |
-| L40W16 | 40 µm | 16 µm | 320×128 | 48×20 µm² | `stage1_L40W16/` | 🔄 進行中 |
-| L50W14 | 50 µm | 14 µm | 400×112 | 58×18 µm² | `stage1_L50W14/` | 🔄 進行中 |
+**動機：** L=30µm 設計 std=6.7%，Port 2/7 僅 3%，嘗試更大/更小 MMI 是否能改善 uniformity。
 
 **共用設定：**
 - Objective：`J = total × (1 − α × norm_CV²)`，α schedule 同 v2
 - Joint geometry optimization：port_pitch / wg_w_in / wg_w_out（FD，每 8 iter）
-- W=14：port_pitch ∈ [1.20, 1.83]；W=16：port_pitch ∈ [1.50, 2.07]
 - Script：`scripts/stage1_param.py --mmi_L {L} --mmi_W {W}`
+- Eval：`scripts/eval_param.py --variant {TAG}`
 
-**評比指標（跑完後填入）：**
+**完整結果：**
 
-| 變體 | J_final | Total T | Std dev | Max imbalance |
-|------|---------|---------|---------|---------------|
-| L30W14 | 1677.5 | 86.0% | 6.67% | 22.6% |
-| L40W14 | — | — | — | — |
-| L40W16 | — | — | — | — |
-| L50W14 | — | — | — | — |
+| 變體 | Total T | Std | Imbalance | J_final | 備註 |
+|------|---------|-----|-----------|---------|------|
+| **L20W14** | **91.5%** | 7.16% | 22.32% | — | ✅ 最高穿透率 |
+| L20W18 | 89.4% | 5.83% | 18.70% | — | |
+| L30W14 | 86.0% | 6.67% | 22.62% | 1677.5 | 基準（v2） |
+| L20W16 | 85.8% | 5.46% | 16.62% | — | |
+| L40W16 | 78.8% | 5.40% | 16.48% | 1662.3 | |
+| L40W14 | 72.7% | 4.16% | 12.69% | 1678.3 | |
+| L50W14 | 57.0% | 3.06% | 8.78% | — | imbalance 改善是假的 |
 
-### Stage 2（Conic filter，以最佳 Stage 1 為 warm start）
-> ⬜ 待 parametric study 完成後執行
+**關鍵發現：**
+- 越長的 MMI（L40/L50）imbalance 雖然下降，但 total T 也大幅下降，是 trade-off 而非真正改善
+- L50W14 的低 imbalance 是假象：optimizer 將功率集中在邊緣 port，Port 2/7 幾乎沒有能量（~3%），total T 只剩 57%
+- 根本結論：imbalance 可以在 Stage 2 靠更強的 α 推，total T 才是 warm start 的關鍵指標
+- **最佳 warm start：L20W14**（total T=91.5%，比 L30W14 多 5.5pp）
+- L20W14 的 imbalance 22.32% 與 L30W14 相當，Stage 2 有空間改善
+
+### Stage 2（Conic filter，L20W14 warm start）
+> 🔄 進行中（2026-05-12 啟動）
+
+**設定：**
+- Warm start：`stage1_L20W14/x_final.npy`
+- Filter：Conic R=300nm（最小特徵尺寸保證）
+- Beta schedule：32 → 48 → 64（iter 0/20/35）
+- Iterations：50，lr=0.01，alpha=0.12
+- Objective：`J = total × (1 − 0.12 × norm_CV²)`（與 Stage 1 一致）
+- Script：`scripts/stage2_param.py --variant L20W14`
+- Output：`stage2_L20W14/`
 
 ---
 
@@ -207,60 +217,45 @@
 
 ```
 meep_1x8_progress/
-├── meep_1x8_splitter.ipynb         Stage 1 notebook（executed）
-├── meep_1x8_stage2.ipynb           Stage 2 notebook（ready）
-├── meep_1x8_eval.ipynb             Transmission eval notebook（executed）
 ├── meep_1x8_design_log.md          本文件
-├── run_stage1.sh                   Stage 1 WSL 執行腳本
-├── run_stage2.sh                   Stage 2 WSL 執行腳本
-├── run_eval.sh                     Transmission eval WSL 執行腳本
-├── log.json                        Stage 1 iteration log（含完整 J history）
-├── progress_latest.png             Stage 1 最新設計圖
-├── progress_iter***.png            Stage 1 各 checkpoint 快照
-├── x_final.npy                     Stage 1 最終設計參數
-├── transmission_eval.png           Binary design + Ez field + per-port bar chart
-├── transmission_eval.json          Stage 1 binary design 傳輸效率數據
-├── eval.log                        Eval 執行 log
 ├── scripts/
-│   ├── stage1_optimize.py          Stage 1 standalone Python script
-│   ├── stage2_refine.py            Stage 2 standalone Python script
-│   └── eval_transmission.py        Transmission eval standalone script
-├── stage1_v2/                      L=30 W=14（已完成，同 stage1_L30W14）
-│   ├── log.json                    v2 iteration log
-│   ├── progress_iter***.png        v2 設計圖快照
-│   ├── x_final_v2.npy              v2 最終設計參數
-│   ├── geo_final_v2.json           v2 最終幾何參數
-│   ├── transmission_eval_v2.png    v2 binary design + Ez + per-port bar chart
-│   └── transmission_eval_v2.json   v2 傳輸效率數據
-├── stage1_L40W14/                  L=40 W=14（進行中）
-│   ├── config.json                 run 配置（mmi_L/W, bounds, schedule 等）
-│   ├── run.log                     執行 log
+│   ├── stage1_param.py             通用 Stage 1 script（--mmi_L --mmi_W）
+│   ├── stage2_param.py             通用 Stage 2 script（--variant）
+│   ├── eval_param.py               通用 eval script（--variant）
+│   ├── print_eval.py               所有變體結果比較輸出
+│   ├── stage2_refine.py            Stage 2 舊版（hardcoded L30W14，保留參考）
+│   └── eval_transmission.py        eval 舊版（保留參考）
+├── stage1_L20W14/                  ✅ Total T=91.5%，Imbalance=22.32%
+│   ├── config.json                 run 配置
+│   ├── log.json                    iteration log（含 mmi_L/W, geo, port_ys）
+│   ├── x_final.npy                 最終設計參數（Stage 2 warm start 使用）
+│   ├── transmission_eval.json/png  eval 結果
+│   └── run.log / eval.log
+├── stage1_L20W16/                  ✅ Total T=85.8%，Imbalance=16.62%
+├── stage1_L20W18/                  ✅ Total T=89.4%，Imbalance=18.70%
+├── stage1_L30W14/                  ✅ Total T=86.0%，Imbalance=22.62%（v2 基準）
+│   ├── ...（v2 主要結果，_v2 後綴）
+│   └── archive_v1/                 v1 結果封存（純 J max，無 uniformity penalty）
+├── stage1_L40W14/                  ✅ Total T=72.7%，Imbalance=12.69%
+├── stage1_L40W16/                  ✅ Total T=78.8%，Imbalance=16.48%
+├── stage1_L50W14/                  ✅ Total T=57.0%，Imbalance=8.78%
+├── stage2_L20W14/                  🔄 Stage 2 進行中（conic filter，50 iter）
 │   ├── log.json                    iteration log
-│   ├── x_final.npy / x_latest.npy 設計參數
-│   └── geo_final.json              最終幾何參數
-├── stage1_L40W16/                  L=40 W=16（進行中）
-│   └── ...（同上）
-├── stage1_L50W14/                  L=50 W=14（進行中）
-│   └── ...（同上）
-├── scripts/
-│   ├── stage1_optimize.py          Stage 1 v1 standalone
-│   ├── stage1_v2_optimize.py       Stage 1 v2 standalone（L=30 W=14）
-│   ├── stage1_param.py             通用參數化 script（--mmi_L --mmi_W）
-│   ├── stage2_refine.py            Stage 2 standalone
-│   ├── eval_transmission.py        Stage 1/2 transmission eval
-│   └── eval_v2.py                  Stage 1 v2 transmission eval
-├── run_L40W14.sh / run_L40W16.sh / run_L50W14.sh   各 variant 執行腳本
-└── stage2/                         Stage 2（待執行）
+│   ├── progress_iter***.png        設計快照
+│   ├── x_latest.npy / x_final_s2.npy
+│   └── run.log
+├── run_L20W14.sh ... run_L50W14.sh Stage 1 各 variant 執行腳本
+├── run_eval_L20W14.sh ...          各 variant eval 腳本
+└── run_stage2_L20W14.sh            Stage 2 執行腳本
 ```
 
 ---
 
 ## 後續計劃
 
-- [ ] **Stage 2** 執行：v2 結果 warm start + conic filter（R=300nm），50 iterations
-- [ ] **Uniformity 根本改善**：
-  - 方案 A（推薦）：延長 MMI（30→40+µm），給優化器更多空間分配模態
-  - 方案 B：改用 max-min objective（最大化最弱 port），autograd 用 softmin 近似
-  - 方案 C：固定對稱性約束（x2d = x2d[::-1,:]），強制設計對稱，消除 Port 1/8 不對稱
+- [x] Parametric study（L20/L30/L40/L50 × W14/W16/W18）完成
+- [x] Stage 2 啟動（L20W14 warm start，conic R=300nm，50 iter）
+- [ ] Stage 2 完成後做 eval，與 Stage 1 L20W14 比較 total T 和 imbalance
+- [ ] 若 Stage 2 效果不佳，考慮嘗試 L20W16 或 L20W18 warm start
 - [ ] GDS export：用 KLayout + GDSFactory 將 binarized design 轉成 GDS，DRC check（最小特徵 ≥ 300nm）
 - [ ] 多波長：考慮 1520–1580 nm broadband optimization

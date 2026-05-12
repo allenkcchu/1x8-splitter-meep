@@ -1,0 +1,38 @@
+Using MPI version 4.0, 1 processes
+Variant: L20W18  mmi=20.0x18.0 µm
+Geo: {'port_pitch': 1.780726924147931, 'wg_w_in': 1.0002613661359754, 'wg_w_out': 1.0189532978044873}
+port_ys: [-6.233 -4.452 -2.671 -0.89   0.89   2.671  4.452  6.233]
+n_eff=1.8836
+Gray fraction (5-95%): 11.1%
+
+Running FDTD...
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+Done.
+
+====================================================
+[L20W18] Transmission Results
+====================================================
+P_in = 969.3561
+Ideal/port = 12.50%
+
+  Port 1 (y=-6.233µm):  22.36%  ███████████████████████████████████
+  Port 2 (y=-4.452µm):   3.66%  █████
+  Port 3 (y=-2.671µm):   9.19%  ██████████████
+  Port 4 (y=-0.890µm):   8.46%  █████████████
+  Port 5 (y=+0.890µm):  12.34%  ███████████████████
+  Port 6 (y=+2.671µm):  12.07%  ███████████████████
+  Port 7 (y=+4.452µm):   3.75%  █████
+  Port 8 (y=+6.233µm):  15.89%  █████████████████████████
+
+  Sum of port T     : 87.72%
+  Full cross-sec T  : 89.39%
+  Mean/port         : 10.96%
+  Std dev           : 5.83%
+  Max imbalance     : 18.70%
+====================================================
+
+Figure: /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage1_L20W18/transmission_eval.png
+JSON:   /mnt/c/Users/Hemera/Projects/meep_1x8_progress/stage1_L20W18/transmission_eval.json
+
+Elapsed run time = 38.5898 s
+DONE Tue May 12 08:47:02 PDT 2026
