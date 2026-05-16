@@ -95,9 +95,9 @@ Stage 2 applies a conic filter (R=300nm) for fabrication-constrained binarizatio
 |---------|-----------|-----------|-------------|-------------|---------------|
 | L20W14 | 91.5% | **95.9%** | 22.32% | **18.35%** | 4.6% |
 | L20W18 | 89.4% | **97.0%** | 18.70% | 19.14% | 4.0% |
-| L50W14 | 57.0% | — | 8.78% | — | 🔄 running |
+| L50W14 | 57.0% | 90.2% | 8.78% | 16.63% | 8.1% |
 
-Stage 2 consistently improves total T through better binarization. L20W14 shows improvement in both T and imbalance; L20W18 achieves the highest total T (97.0%) but imbalance is unchanged.
+Stage 2 consistently improves total T through better binarization. L20W14 shows improvement in both T and imbalance; L20W18 achieves the highest total T (97.0%) but imbalance is unchanged. L50W14 shows the largest absolute gain (+33 pp T) but the imbalance worsens because the optimizer can no longer suppress the edge-port dominance pattern once the design is binarized.
 
 The persistent edge-port dominance (Port 1/8 high, Port 2/7 low) is a topology-level limitation not addressable by Stage 2 refinement alone.
 
@@ -131,6 +131,19 @@ The persistent edge-port dominance (Port 1/8 high, Port 2/7 low) is a topology-l
 | 7 | +4.452 |  2.86% |
 | 8 | +6.233 | 18.67% |
 
+**Stage 2 L50W14** (Total T = 90.2%, Imbalance = 16.63%)
+
+| Port | y (µm) | T (%) |
+|------|--------|-------|
+| 1 | −6.234 | 17.62% |
+| 2 | −4.453 |  2.14% |
+| 3 | −2.672 | 12.85% |
+| 4 | −0.891 |  9.95% |
+| 5 | +0.891 | 13.44% |
+| 6 | +2.672 | 11.85% |
+| 7 | +4.453 |  2.79% |
+| 8 | +6.234 | 18.76% |
+
 ---
 
 ## Repo Structure
@@ -138,35 +151,31 @@ The persistent edge-port dominance (Port 1/8 high, Port 2/7 low) is a topology-l
 ```
 meep_1x8_progress/
 ├── scripts/
-│   ├── stage1_param.py          Stage 1 parametric optimization (--mmi_L --mmi_W)
-│   ├── stage2_param.py          Stage 2 conic refinement (--variant)
+│   ├── stage1_param.py          Stage 1 parametric optimization (--mmi_L --mmi_W --warmstart --out)
+│   ├── stage2_param.py          Stage 2 conic refinement (--variant --resume --out)
 │   ├── eval_param.py            Stage 1 transmission eval (--variant)
-│   ├── eval_stage2.py           Stage 2 transmission eval (--variant)
+│   ├── eval_stage2.py           Stage 2 transmission eval (--variant --base --out)
 │   ├── print_eval.py            All-variant comparison printout
 │   └── stage2_refine.py         Stage 2 legacy script (reference)
-├── stage1_L20W14/               ✅ Total T=91.5%  Imbalance=22.32%
-├── stage1_L20W16/               ✅ Total T=85.8%  Imbalance=16.62%
-├── stage1_L20W18/               ✅ Total T=89.4%  Imbalance=18.70%
-├── stage1_L30W14/               ✅ Total T=86.0%  Imbalance=22.62% (v2 baseline)
-│   └── archive_v1/              v1 results (pure J max, no uniformity penalty)
-├── stage1_L40W14/               ✅ Total T=72.7%  Imbalance=12.69%
-├── stage1_L40W16/               ✅ Total T=78.8%  Imbalance=16.48%
-├── stage1_L50W14/               ✅ Total T=57.0%  Imbalance=8.78%
-├── stage2_L20W14/               ✅ Total T=95.9%  Imbalance=18.35%
-├── stage2_L20W18/               ✅ Total T=97.0%  Imbalance=19.14%
-├── stage2_L50W14/               🔄 Running (Stage 2 in progress)
-├── meep_1x8_design_log.md       Full design log with methods and findings (Chinese)
-├── run_L{L}W{W}.sh              Stage 1 WSL launch scripts
-├── run_eval_L{L}W{W}.sh         Stage 1 eval scripts
-├── run_stage2_L{L}W{W}.sh       Stage 2 WSL launch scripts
-└── run_eval_stage2_L{L}W{W}.sh  Stage 2 eval scripts
+├── launchers/                   WSL launch scripts (.sh)
+├── meep/                        Simulation results
+│   ├── stage1_L20W14/           ✅ Total T=91.5%  Imbalance=22.32%
+│   ├── stage1_L20W16/           ✅ Total T=85.8%  Imbalance=16.62%
+│   ├── stage1_L20W18/           ✅ Total T=89.4%  Imbalance=18.70%
+│   ├── stage1_L30W14/           ✅ Total T=86.0%  Imbalance=22.62%
+│   ├── stage1_L40W14/           ✅ Total T=72.7%  Imbalance=12.69%
+│   ├── stage1_L40W16/           ✅ Total T=78.8%  Imbalance=16.48%
+│   ├── stage1_L50W14/           ✅ Total T=57.0%  Imbalance=8.78%
+│   ├── stage2_L20W14/           ✅ Total T=95.9%  Imbalance=18.35%
+│   ├── stage2_L20W18/           ✅ Total T=97.0%  Imbalance=19.14%
+│   └── stage2_L50W14_r1/        ✅ Total T=90.2%  Imbalance=16.63%
+└── meep_1x8_design_log.md       Full design log with methods and findings (Chinese)
 ```
 
 ---
 
 ## Next Steps
 
-- [ ] Stage 2 L50W14 eval — verify if conic refinement recovers transmission while preserving low imbalance
 - [ ] New design concept targeting edge-port uniformity issue (Port 2/7 starvation)
 - [ ] GDS export via KLayout / GDSFactory, DRC check (min feature ≥ 300 nm)
 - [ ] Broadband optimization (1520–1580 nm)

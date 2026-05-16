@@ -16,11 +16,13 @@ mp.verbosity(0)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--variant', required=True)
+parser.add_argument('--base', default='/mnt/c/Users/Hemera/Projects/meep_1x8_progress')
+parser.add_argument('--out', default=None, help='Override OUT2 directory')
 args = parser.parse_args()
 
-BASE  = '/mnt/c/Users/Hemera/Projects/meep_1x8_progress'
+BASE  = args.base
 OUTV1 = f'{BASE}/stage1_{args.variant}'
-OUT2  = f'{BASE}/stage2_{args.variant}'
+OUT2  = args.out if args.out else f'{BASE}/stage2_{args.variant}'
 
 with open(f'{OUTV1}/config.json') as f:
     cfg = json.load(f)

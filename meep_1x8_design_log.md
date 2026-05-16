@@ -199,17 +199,145 @@
 - **最佳 warm start：L20W14**（total T=91.5%，比 L30W14 多 5.5pp）
 - L20W14 的 imbalance 22.32% 與 L30W14 相當，Stage 2 有空間改善
 
-### Stage 2（Conic filter，L20W14 warm start）
-> 🔄 進行中（2026-05-12 啟動）
+### Stage 2（Conic filter，各 variant）
+> ✅ 完成（2026-05-12～15）
 
-**設定：**
-- Warm start：`stage1_L20W14/x_final.npy`
+**共用設定：**
 - Filter：Conic R=300nm（最小特徵尺寸保證）
 - Beta schedule：32 → 48 → 64（iter 0/20/35）
 - Iterations：50，lr=0.01，alpha=0.12
-- Objective：`J = total × (1 − 0.12 × norm_CV²)`（與 Stage 1 一致）
-- Script：`scripts/stage2_param.py --variant L20W14`
-- Output：`stage2_L20W14/`
+- Script：`scripts/stage2_param.py --variant {TAG}`
+
+---
+
+#### Stage 2 L20W14
+> ✅ 完成（2026-05-12）
+
+| 指標 | Stage 1 | Stage 2 | 變化 |
+|------|---------|---------|------|
+| Total T | 91.5% | **95.9%** | +4.4pp |
+| Std | 7.16% | 5.71% | ↓ |
+| Max imbalance | 22.32% | **18.35%** | ↓ |
+| Gray fraction | — | 4.6% | |
+
+**Per-port：**
+
+| Port | y (µm) | T (%) |
+|------|--------|-------|
+| 1 | −6.129 | 19.16% |
+| 2 | −4.378 |  2.95% |
+| 3 | −2.627 | 14.79% |
+| 4 | −0.876 |  9.23% |
+| 5 | +0.876 | 10.66% |
+| 6 | +2.627 | 13.64% |
+| 7 | +4.378 |  3.55% |
+| 8 | +6.129 | 21.30% |
+
+---
+
+#### Stage 2 L20W18
+> ✅ 完成（2026-05-12）
+
+| 指標 | Stage 1 | Stage 2 | 變化 |
+|------|---------|---------|------|
+| Total T | 89.4% | **97.0%** | +7.6pp |
+| Std | 5.83% | 5.71% | ≈ |
+| Max imbalance | 18.70% | 19.14% | ↑ |
+| Gray fraction | — | 4.0% | |
+
+**Per-port：**
+
+| Port | y (µm) | T (%) |
+|------|--------|-------|
+| 1 | −6.233 | 21.75% |
+| 2 | −4.452 |  2.61% |
+| 3 | −2.671 | 14.02% |
+| 4 | −0.890 | 11.43% |
+| 5 | +0.890 | 11.03% |
+| 6 | +2.671 | 14.03% |
+| 7 | +4.452 |  2.86% |
+| 8 | +6.233 | 18.67% |
+
+**觀察：** total T 為所有 variant 最高（97.0%），但 imbalance 未改善，Port 2/7 仍在 ~2.7%。
+
+---
+
+#### Stage 2 L50W14（stage2_L50W14_r1）
+> ✅ 完成（2026-05-15）
+
+**過程說明：**
+
+Stage 2 L50W14 的優化過程較曲折：
+
+1. 原始 stage2_L50W14 跑了 48 iters（J=1778），但因 WSL 進程中斷，沒有存下 `x_final_s2.npy`，只有 iter 45 的 `x_latest.npy`（J=1776）。
+2. 嘗試以 5 iters resume 補跑剩餘 iters，但 Adam 動量狀態（m, v）從零重啟，第一步的 bias correction 導致 update step 等效於 `lr * sign(grad)` = 0.01，把設計推到很差的位置（J 從 1776 掉到 1008）。`save_progress` 在 i=0 觸發並覆蓋了 x_latest.npy，iter 45 的好 checkpoint 丟失。
+3. 停掉 5-iter resume，改以現有的（已破壞的）x_latest.npy 為起點，重新跑 Stage 2 共 30 iters（beta 從 32 重新開始）。Adam 在 30 iters 中有足夠時間重建動量，J 從 1035 恢復到 1773。
+
+**設定：**
+- Warm start：`stage2_L50W14/x_latest.npy`（iter 46 的破壞後狀態）
+- Iterations：30，start_iter=0（beta schedule 從 32 重啟）
+- Output：`meep/stage2_L50W14_r1/`
+- Script：`stage2_param.py --resume --out .../stage2_L50W14_r1 --n_iters 30 --start_iter 0`
+
+**J 恢復過程：**
+
+| Iter | J |
+|------|---|
+| 0 | 1035.5（壞 warm start） |
+| 5 | 1634.0 |
+| 10 | 1717.6 |
+| 15 | 1749.5 |
+| 20 | 1731.1（beta 升至 48，短暫下降） |
+| 25 | 1766.0 |
+| 29 | 1773.4 |
+
+**最終結果：**
+
+| 指標 | Stage 1 | Stage 2 | 變化 |
+|------|---------|---------|------|
+| Total T | 57.0% | **90.2%** | **+33.2pp** |
+| Std | 3.06% | 5.71% | ↑ |
+| Max imbalance | 8.78% | 16.63% | ↑ |
+| Gray fraction | — | 8.1% | |
+
+**Per-port：**
+
+| Port | y (µm) | T (%) |
+|------|--------|-------|
+| 1 | −6.234 | 17.62% |
+| 2 | −4.453 |  2.14% |
+| 3 | −2.672 | 12.85% |
+| 4 | −0.891 |  9.95% |
+| 5 | +0.891 | 13.44% |
+| 6 | +2.672 | 11.85% |
+| 7 | +4.453 |  2.79% |
+| 8 | +6.234 | 18.76% |
+
+**觀察：**
+- Total T 從 57% 提升到 90%，是所有 variant 中最大的絕對增益（+33pp），但 imbalance 反而惡化。
+- Port 2/7 仍然嚴重不足（~2.5%），和 L20W14/W18 相同的 edge-port dominance 問題。
+- L50W14 Stage 1 的低 imbalance（8.78%）是假象——優化器將功率集中在邊緣 port 而非 Port 2/7，Stage 2 binarization 讓這個結構更難繞過。
+- Gray fraction 8.1% 高於 L20W14/W18（4–5%），顯示 30 iters 的 binarization 尚未完全收斂，繼續跑可能可以降低 gray fraction 並提升 T。
+
+**教訓（Adam resume 問題）：**
+- 若要 resume Adam 優化，必須同時儲存動量狀態（m, v arrays）。
+- 僅靠少數 iters（5 iters）重啟動量無法恢復，因為 bias correction 讓第一步 step size 已達穩態大小，但方向性（哪些 pixels 重要）沒有歷史資訊。
+- 後續改進：在 `save_progress` 中一起儲存 `m_ax`、`v_ax`，並在 resume 時載入。
+
+---
+
+### Stage 2 綜合比較
+
+| Variant | S1 Total T | S2 Total T | S1 Imbalance | S2 Imbalance | Gray fraction |
+|---------|-----------|-----------|-------------|-------------|---------------|
+| L20W14 | 91.5% | **95.9%** | 22.32% | **18.35%** | 4.6% |
+| L20W18 | 89.4% | **97.0%** | 18.70% | 19.14% | 4.0% |
+| L50W14 | 57.0% | 90.2% | 8.78% | 16.63% | 8.1% |
+
+**結論：**
+- Stage 2 一致性地提升 total T（binarization 讓模式耦合更乾淨）。
+- Port 2/7 starving（~2–3%）是所有 variant 共有的拓撲限制，Stage 2 無法改變。
+- 最佳設計：**L20W18**（Total T=97.0%）。若優先考量 imbalance：**L20W14**（Imbalance=18.35%）。
 
 ---
 
@@ -219,34 +347,25 @@
 meep_1x8_progress/
 ├── meep_1x8_design_log.md          本文件
 ├── scripts/
-│   ├── stage1_param.py             通用 Stage 1 script（--mmi_L --mmi_W）
-│   ├── stage2_param.py             通用 Stage 2 script（--variant）
-│   ├── eval_param.py               通用 eval script（--variant）
+│   ├── stage1_param.py             Stage 1（--mmi_L --mmi_W --n_iters --warmstart --out）
+│   ├── stage2_param.py             Stage 2（--variant --base --resume --out --start_iter）
+│   ├── eval_param.py               Stage 1 eval（--variant）
+│   ├── eval_stage2.py              Stage 2 eval（--variant --base --out）
 │   ├── print_eval.py               所有變體結果比較輸出
-│   ├── stage2_refine.py            Stage 2 舊版（hardcoded L30W14，保留參考）
-│   └── eval_transmission.py        eval 舊版（保留參考）
-├── stage1_L20W14/                  ✅ Total T=91.5%，Imbalance=22.32%
-│   ├── config.json                 run 配置
-│   ├── log.json                    iteration log（含 mmi_L/W, geo, port_ys）
-│   ├── x_final.npy                 最終設計參數（Stage 2 warm start 使用）
-│   ├── transmission_eval.json/png  eval 結果
-│   └── run.log / eval.log
-├── stage1_L20W16/                  ✅ Total T=85.8%，Imbalance=16.62%
-├── stage1_L20W18/                  ✅ Total T=89.4%，Imbalance=18.70%
-├── stage1_L30W14/                  ✅ Total T=86.0%，Imbalance=22.62%（v2 基準）
-│   ├── ...（v2 主要結果，_v2 後綴）
-│   └── archive_v1/                 v1 結果封存（純 J max，無 uniformity penalty）
-├── stage1_L40W14/                  ✅ Total T=72.7%，Imbalance=12.69%
-├── stage1_L40W16/                  ✅ Total T=78.8%，Imbalance=16.48%
-├── stage1_L50W14/                  ✅ Total T=57.0%，Imbalance=8.78%
-├── stage2_L20W14/                  🔄 Stage 2 進行中（conic filter，50 iter）
-│   ├── log.json                    iteration log
-│   ├── progress_iter***.png        設計快照
-│   ├── x_latest.npy / x_final_s2.npy
-│   └── run.log
-├── run_L20W14.sh ... run_L50W14.sh Stage 1 各 variant 執行腳本
-├── run_eval_L20W14.sh ...          各 variant eval 腳本
-└── run_stage2_L20W14.sh            Stage 2 執行腳本
+│   └── stage2_refine.py            Stage 2 舊版（保留參考）
+├── launchers/                      WSL 執行腳本（.sh）
+├── meep/                           模擬結果
+│   ├── stage1_L20W14/              ✅ Total T=91.5%，Imbalance=22.32%
+│   ├── stage1_L20W16/              ✅ Total T=85.8%，Imbalance=16.62%
+│   ├── stage1_L20W18/              ✅ Total T=89.4%，Imbalance=18.70%
+│   ├── stage1_L30W14/              ✅ Total T=86.0%，Imbalance=22.62%
+│   ├── stage1_L40W14/              ✅ Total T=72.7%，Imbalance=12.69%
+│   ├── stage1_L40W16/              ✅ Total T=78.8%，Imbalance=16.48%
+│   ├── stage1_L50W14/              ✅ Total T=57.0%，Imbalance=8.78%
+│   ├── stage2_L20W14/              ✅ Total T=95.9%，Imbalance=18.35%
+│   ├── stage2_L20W18/              ✅ Total T=97.0%，Imbalance=19.14%
+│   └── stage2_L50W14_r1/           ✅ Total T=90.2%，Imbalance=16.63%
+└── README.md
 ```
 
 ---
@@ -254,8 +373,8 @@ meep_1x8_progress/
 ## 後續計劃
 
 - [x] Parametric study（L20/L30/L40/L50 × W14/W16/W18）完成
-- [x] Stage 2 啟動（L20W14 warm start，conic R=300nm，50 iter）
-- [ ] Stage 2 完成後做 eval，與 Stage 1 L20W14 比較 total T 和 imbalance
-- [ ] 若 Stage 2 效果不佳，考慮嘗試 L20W16 或 L20W18 warm start
-- [ ] GDS export：用 KLayout + GDSFactory 將 binarized design 轉成 GDS，DRC check（最小特徵 ≥ 300nm）
-- [ ] 多波長：考慮 1520–1580 nm broadband optimization
+- [x] Stage 2 L20W14、L20W18、L50W14 全部完成並 eval
+- [ ] 解決 Port 2/7 starving 問題（新 topology 或 objective 策略）
+- [ ] Adam optimizer 狀態（m, v）隨 checkpoint 儲存，支援正確 resume
+- [ ] GDS export：KLayout + GDSFactory，DRC check（最小特徵 ≥ 300nm）
+- [ ] 多波長：1520–1580 nm broadband optimization

@@ -1,5 +1,0 @@
-[NbConvertApp] Converting notebook meep_1x8_splitter_v2.ipynb to notebook
-/home/allen/anaconda3/envs/pmp/lib/python3.10/site-packages/nbformat/__init__.py:92: MissingIDFieldWarning: Code cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
-  validate(nb)
-[NbConvertApp] Writing 392493 bytes to meep_1x8_splitter_v2.ipynb
-DONE Mon May 11 02:24:20 PDT 2026

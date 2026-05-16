@@ -22,11 +22,16 @@ parser.add_argument('--variant', required=True, help='e.g. L20W14')
 parser.add_argument('--n_iters', type=int, default=50)
 parser.add_argument('--lr', type=float, default=0.01)
 parser.add_argument('--alpha', type=float, default=0.12, help='uniformity penalty weight')
+parser.add_argument('--resume', action='store_true', help='Resume from x_latest.npy in OUT2 (or --warmstart path)')
+parser.add_argument('--warmstart', default=None, help='Path to .npy for warm start (overrides default resume path)')
+parser.add_argument('--base', default='/mnt/c/Users/Hemera/Projects/meep_1x8_progress', help='Base directory')
+parser.add_argument('--out', default=None, help='Override output directory (OUT2)')
+parser.add_argument('--start_iter', type=int, default=0, help='Iteration offset for beta schedule and progress numbering')
 args = parser.parse_args()
 
-BASE  = '/mnt/c/Users/Hemera/Projects/meep_1x8_progress'
+BASE  = args.base
 OUTV1 = f'{BASE}/stage1_{args.variant}'
-OUT2  = f'{BASE}/stage2_{args.variant}'
+OUT2  = args.out if args.out else f'{BASE}/stage2_{args.variant}'
 os.makedirs(OUT2, exist_ok=True)
 print(f'=== Stage 2: variant={args.variant}  out={OUT2} ===')
 
@@ -154,12 +159,12 @@ opt = mpa.OptimizationProblem(
 )
 
 # ── Progress saver ─────────────────────────────────────────────────────────────
-def save_progress(i, x, hist):
-    x2d = sigmoid_project(x.reshape(Ny_des, Nx_des), get_beta(i))
+def save_progress(abs_i, x, hist):
+    x2d = sigmoid_project(x.reshape(Ny_des, Nx_des), get_beta(abs_i))
     ext = [-mmi_L/2, mmi_L/2, -mmi_W/2, mmi_W/2]
     fig, axes = plt.subplots(1, 2, figsize=(12, 4))
     axes[0].imshow(x2d, origin='lower', cmap='RdBu_r', vmin=0, vmax=1, extent=ext)
-    axes[0].set_title(f'Stage 2 [{args.variant}] iter {i}')
+    axes[0].set_title(f'Stage 2 [{args.variant}] iter {abs_i}')
     axes[0].set_xlabel('x (µm)'); axes[0].set_ylabel('y (µm)')
     for y in port_ys:
         axes[0].axhline(y, color='yellow', lw=0.6, ls='--', alpha=0.7)
@@ -167,30 +172,37 @@ def save_progress(i, x, hist):
     axes[1].set_xlabel('Iteration'); axes[1].set_ylabel('J')
     axes[1].set_title(f'J={hist[-1]:.2f}'); axes[1].grid(alpha=0.3)
     plt.tight_layout()
-    plt.savefig(f'{OUT2}/progress_iter{i:03d}.png', dpi=110, bbox_inches='tight')
-    plt.savefig(f'{OUT2}/progress_latest.png',       dpi=110, bbox_inches='tight')
+    plt.savefig(f'{OUT2}/progress_iter{abs_i:03d}.png', dpi=110, bbox_inches='tight')
+    plt.savefig(f'{OUT2}/progress_latest.png',           dpi=110, bbox_inches='tight')
     plt.close(fig)
     with open(f'{OUT2}/log.json', 'w') as f:
-        json.dump({'iter': i, 'J_history': hist, 'beta': get_beta(i),
+        json.dump({'iter': abs_i, 'J_history': hist, 'beta': get_beta(abs_i),
                    'alpha': args.alpha, 'variant': args.variant}, f)
     np.save(f'{OUT2}/x_latest.npy', x)
 
-# ── Load Stage 1 warm start ────────────────────────────────────────────────────
-x = np.load(f'{OUTV1}/x_final.npy')
-print(f'Warm start loaded: {OUTV1}/x_final.npy  shape={x.shape}')
+# ── Load warm start ────────────────────────────────────────────────────────────
+if args.resume:
+    src = args.warmstart if args.warmstart else f'{BASE}/stage2_{args.variant}/x_latest.npy'
+    x = np.load(src)
+    hist = []
+    print(f'Warm start (Stage 2 restart): {src}  shape={x.shape}')
+else:
+    x = np.load(f'{OUTV1}/x_final.npy')
+    hist = []
+    print(f'Warm start loaded: {OUTV1}/x_final.npy  shape={x.shape}')
 
 # ── Adam optimizer ─────────────────────────────────────────────────────────────
 n_iters = args.n_iters; lr = args.lr
 b1, b2, eps_a = 0.9, 0.999, 1e-8
 m_ax = np.zeros_like(x); v_ax = np.zeros_like(x)
-hist = []
 
-print(f'\nStarting Stage 2: {n_iters} iters | conic R={conic_R_um*1000:.0f}nm | alpha={args.alpha} | lr={lr}')
+print(f'\nStarting Stage 2: {n_iters} iters | conic R={conic_R_um*1000:.0f}nm | alpha={args.alpha} | lr={lr} | start_iter={args.start_iter}')
 
 for i in range(n_iters):
-    beta = get_beta(i)
-    x2d  = x.reshape(Ny_des, Nx_des)
-    xp   = sigmoid_project(x2d, beta).flatten()
+    abs_i = args.start_iter + i
+    beta  = get_beta(abs_i)
+    x2d   = x.reshape(Ny_des, Nx_des)
+    xp    = sigmoid_project(x2d, beta).flatten()
 
     f_val, dJ = opt([xp])
     grad = backprop_gradient(x2d, np.asarray(dJ).flatten(), beta)
@@ -202,10 +214,10 @@ for i in range(n_iters):
     x    = np.clip(x + lr * m_h / (np.sqrt(v_h) + eps_a), 0, 1)
 
     hist.append(float(f_val))
-    print(f'  [S2/{args.variant}] Iter {i:3d} | beta={beta:2d} | alpha={args.alpha} | J={float(f_val):.4f}', flush=True)
+    print(f'  [S2/{args.variant}] Iter {abs_i:3d} | beta={beta:2d} | alpha={args.alpha} | J={float(f_val):.4f}', flush=True)
 
     if i % 5 == 0 or i == n_iters - 1:
-        save_progress(i, x, hist)
+        save_progress(abs_i, x, hist)
 
 np.save(f'{OUT2}/x_final_s2.npy', x)
 print(f'\nDone. J: {hist[0]:.4f} → {hist[-1]:.4f}')

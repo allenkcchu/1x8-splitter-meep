@@ -23,15 +23,19 @@ from autograd import numpy as npa
 parser = argparse.ArgumentParser()
 parser.add_argument('--mmi_L', type=float, default=40.0, help='MMI length (um)')
 parser.add_argument('--mmi_W', type=float, default=14.0, help='MMI width (um)')
+parser.add_argument('--n_iters', type=int, default=100)
+parser.add_argument('--warmstart', default=None, help='Path to .npy file for topology warm start')
+parser.add_argument('--warmgeo',   default=None, help='Path to geo_final.json for geometry warm start')
+parser.add_argument('--out',       default=None, help='Override output directory')
 args = parser.parse_args()
 mmi_L = args.mmi_L
 mmi_W = args.mmi_W
 
 mp.verbosity(0)
 
-ROOT = '/mnt/c/Users/Hemera/Projects/meep_1x8_progress'
+ROOT = '/mnt/c/Users/Hemera/Projects/meep_1x8_progress/meep'
 TAG  = f'L{int(mmi_L)}W{int(mmi_W)}'
-OUTV = f'{ROOT}/stage1_{TAG}'
+OUTV = args.out if args.out else f'{ROOT}/stage1_{TAG}'
 os.makedirs(OUTV, exist_ok=True)
 print(f'=== Stage 1 param: mmi_L={mmi_L}um  mmi_W={mmi_W}um  → {OUTV} ===')
 
@@ -63,7 +67,13 @@ pitch_max_phys = (mmi_W - 1.0) / (N_out - 1)          # hard physical limit
 pitch_init     = min(1.75, pitch_max_phys * 0.95)      # 5% margin from edge
 pitch_hi       = round(pitch_max_phys * 0.97, 3)       # optimizer upper bound
 
-geo = {'port_pitch': pitch_init, 'wg_w_in': 1.0, 'wg_w_out': 1.0}
+if args.warmgeo:
+    with open(args.warmgeo) as _f:
+        _wg = json.load(_f)
+    geo = _wg['geo']
+    print(f'Geo warm start: {geo}')
+else:
+    geo = {'port_pitch': pitch_init, 'wg_w_in': 1.0, 'wg_w_out': 1.0}
 GEO_BOUNDS   = {'port_pitch': (1.20, pitch_hi), 'wg_w_in': (0.80, 1.50), 'wg_w_out': (0.80, 1.50)}
 GEO_DELTA    = {'port_pitch': 0.03, 'wg_w_in': 0.05, 'wg_w_out': 0.05}
 GEO_LR       = 0.005
@@ -205,7 +215,7 @@ config={
     'filter_sig_px':filter_sig,'wg_ext':wg_ext,'pml_th':pml_th,
     'n_eff_2d':n_eff_2d,'freq0':freq0,
     'geo_init':dict(geo),'geo_bounds':GEO_BOUNDS,
-    'n_iters':100,'lr_topo':0.02,'GEO_LR':GEO_LR,'GEO_INTERVAL':GEO_INTERVAL,
+    'n_iters':args.n_iters,'lr_topo':0.02,'GEO_LR':GEO_LR,'GEO_INTERVAL':GEO_INTERVAL,
     'alpha_schedule':[0.0,0.05,0.12],'beta_schedule':[4,8,16,32],
 }
 with open(f'{OUTV}/config.json','w') as f:
@@ -213,10 +223,14 @@ with open(f'{OUTV}/config.json','w') as f:
 print(f'Config saved: {OUTV}/config.json')
 
 # ── Initialize ─────────────────────────────────────────────────────────────────
-n_iters=100; lr_topo=0.02; save_every=5
+n_iters=args.n_iters; lr_topo=0.02; save_every=5
 b1,b2,eps_a=0.9,0.999,1e-8
 
-x=np.ones(Nx_des*Ny_des)*0.5
+if args.warmstart:
+    x = np.load(args.warmstart).flatten()
+    print(f'Topology warm start: {args.warmstart}  shape={x.shape}')
+else:
+    x=np.ones(Nx_des*Ny_des)*0.5
 m_ax=np.zeros_like(x); v_ax=np.zeros_like(x)
 hist=[]
 
